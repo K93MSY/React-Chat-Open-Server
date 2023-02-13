@@ -2,11 +2,11 @@ require('dotenv').config();
 require('express')()
 .get('/',(req,res) => {
     res.status(200);
-    res.json({
+    res.send({
         message:"Hello World"
     })
 }).get('/users',(req,res) => {
-    res.json({
+    res.send({
         ActiveUsers:0,
     });
 }).listen(process.env.PORT,()=>{
