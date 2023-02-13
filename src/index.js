@@ -17,11 +17,11 @@ require('express')()
     )
     .get('/', (req, res) => {
         res.status(200);
-        res.send({
+        res.json({
             message: "Hello World"
         })
     }).get('/users', (req, res) => {
-        res.send({
+        res.json({
             ActiveUsers: 0,
         });
     }).listen(process.env.PORT, () => {
